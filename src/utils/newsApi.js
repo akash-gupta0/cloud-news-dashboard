@@ -1,4 +1,3 @@
-// src/utils/newsApi.js
 const NEWS_SOURCES = [
   'techcrunch.com',
   'thenewstack.io',
@@ -15,7 +14,7 @@ export async function fetchTechNews() {
   const response = await fetch('https://newsapi.org/v2/everything?' + new URLSearchParams({
     q: '(devops OR "cloud computing" OR kubernetes OR "cloud native" OR microservices OR containerization OR "continuous integration" OR "continuous deployment" OR "infrastructure as code")',
     domains: NEWS_SOURCES,
-    apiKey: process.env.NEXT_PUBLIC_NEWS_API_KEY,
+    apiKey: '378e0ee40a884bf08e88a1788acb5b8d', // Directly added API key
     pageSize: 30,
     language: 'en',
     sortBy: 'publishedAt'
